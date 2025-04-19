@@ -1,0 +1,19 @@
+{
+  "import": [
+    {
+      "path": "Yoorkin/rabbit-tea",
+      "alias": "tea"
+    },
+    "Yoorkin/rabbit-tea/html"
+  ],
+  "link": {
+    "js": {
+      "exports": [
+        "button",
+        "on",
+        "send"
+      ],
+      "format": "esm"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "rabbit-tea-vite",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test1": "cd test/project1 && npm run dev",
+    "test2": "cd test/project2 && npm run dev",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@tailwindcss/vite": "4.0.17"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
+  "type": "module"
+}
