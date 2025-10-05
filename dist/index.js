@@ -92,7 +92,8 @@ export default function rabbitTEA(mainPackagePath) {
         else {
             hasError = true;
             const stdout = result.stdout ? result.stdout.toString() : '';
-            throw new Error(stdout + result.stderr);
+            const stderr = result.stderr ? result.stderr.toString() : '';
+            throw new Error(stdout + stderr);
         }
     };
     function reportError(err, server) {
