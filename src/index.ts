@@ -12,7 +12,7 @@ type MoonModConfig = {
 type MoonPkgConfig = {
   // package path in mooncakes.io
   packagePath: string,
-  // package path relative to the module path in mooncakes.io 
+  // package path relative to the module path in mooncakes.io
   relativePath: string,
   isMain: boolean,
   lastPath: string
@@ -114,7 +114,8 @@ export default function rabbitTEA(mainPackagePath?: string): Plugin {
       hasError = false;
     } else {
       hasError = true;
-      throw new Error(result.stdout.toString() + result.stderr)
+      const stdout = result.stdout ? result.stdout.toString() : '';
+      throw new Error(stdout + result.stderr);
     }
   };
 
